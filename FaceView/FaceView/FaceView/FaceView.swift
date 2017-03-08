@@ -10,17 +10,17 @@
   @IBDesignable
   class FaceView: UIView {
     @IBInspectable
-    var color: UIColor = UIColor.blue
+    var color: UIColor = UIColor.blue { didSet { setNeedsDisplay() } }
     @IBInspectable
-    var linewidth: CGFloat = 5.0
+    var linewidth: CGFloat = 5.0 { didSet { setNeedsDisplay() } }
     @IBInspectable
-    var scale: CGFloat = 0.90
+    var scale: CGFloat = 0.90 { didSet { setNeedsDisplay() } }
     @IBInspectable
-    let mouthCurvature: Double = 1.0
+    var mouthCurvature: Double = 1.0 { didSet { setNeedsDisplay() } }
     @IBInspectable
-    var eyesOpen:Bool = true
+    var eyesOpen:Bool = true { didSet { setNeedsDisplay() } }
     @IBInspectable
-    let eyeBrowTilt:Double = 1.0
+    var eyeBrowTilt:Double = 1.0 { didSet { setNeedsDisplay() } }
 
     var skullRadius: CGFloat{
         return min(bounds.size.width, bounds.size.height)/2 * scale
