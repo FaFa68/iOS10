@@ -60,5 +60,14 @@ class FaceViewController: UIViewController {
     func decreaseHappiness() {
         expression.mouth = expression.mouth.sadderMouth()
     }
+    @IBAction func toggleEyes(_ recognizer: UITapGestureRecognizer) {
+        if recognizer.state == .ended {
+            switch expression.eyes {
+            case .Open      : expression.eyes = .Closed
+            case .Closed    : expression.eyes = .Open
+            case .Squinting : break
+            }
+        }
+    }
 }
 
