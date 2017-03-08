@@ -7,15 +7,21 @@
   //
   
   import UIKit
-  
+  @IBDesignable
   class FaceView: UIView {
-    
+    @IBInspectable
     var color: UIColor = UIColor.blue
+    @IBInspectable
     var linewidth: CGFloat = 5.0
+    @IBInspectable
     var scale: CGFloat = 0.90
-    let mouthCurvature = 1.0
+    @IBInspectable
+    let mouthCurvature: Double = 1.0
+    @IBInspectable
     var eyesOpen:Bool = true
-    let eyeBrowTilt = 1.0
+    @IBInspectable
+    let eyeBrowTilt:Double = 1.0
+
     var skullRadius: CGFloat{
         return min(bounds.size.width, bounds.size.height)/2 * scale
     }
