@@ -128,4 +128,14 @@
         pathForEyebrow(eye: .leftEye).stroke()
         pathForEyebrow(eye: .rightEye).stroke()
     }
+    
+    func changeScale(recognizer : UIPinchGestureRecognizer){
+        switch recognizer.state {
+        case .changed , .ended:
+            scale *= recognizer.scale
+            recognizer.scale = 1
+        default:
+            break
+        }
+    }
   }
