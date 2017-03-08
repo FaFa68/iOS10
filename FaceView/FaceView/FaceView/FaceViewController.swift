@@ -10,7 +10,7 @@ import UIKit
 
 class FaceViewController: UIViewController {
     
-    var expression = FacialExpression(eyes: .Open, eyeBrows: .Normal , mouth: .Smile) {
+    var expression = FacialExpression(eyes: .Open, eyeBrows: .Normal , mouth: .Frown) {
         didSet {
             updateUI()
         }
@@ -18,7 +18,20 @@ class FaceViewController: UIViewController {
     
     @IBOutlet weak var faceView: FaceView! {
         didSet {
-            faceView.addGestureRecognizer(UIPinchGestureRecognizer(target: faceView, action: #selector(FaceView.changeScale(recognizer:))))
+            faceView.addGestureRecognizer(UIPinchGestureRecognizer(
+                target: faceView, action: #selector(FaceView.changeScale(recognizer:))
+            ))
+            let happierSwipeGestureRecognizer = UISwipeGestureRecognizer(
+                target: self, action: #selector(FaceViewController.increaseHappiness)
+            )
+            happierSwipeGestureRecognizer.direction = .up
+            faceView.addGestureRecognizer(happierSwipeGestureRecognizer)
+            
+            let sadderSwipeGestureRecognizer = UISwipeGestureRecognizer(
+                target: self, action: #selector(FaceViewController.decreaseHappiness)
+            )
+            sadderSwipeGestureRecognizer.direction = .down
+            faceView.addGestureRecognizer(sadderSwipeGestureRecognizer)
             updateUI()
         }
     }
@@ -38,6 +51,14 @@ class FaceViewController: UIViewController {
         }
         faceView.mouthCurvature = mouthCurvatures[expression.mouth] ?? 0.0
         faceView.eyeBrowTilt = eyeBrowTilits[expression.eyeBrows]   ?? 0.0
+    }
+    
+    func increaseHappiness() {
+        expression.mouth = expression.mouth.happierMouth()
+    }
+    
+    func decreaseHappiness() {
+        expression.mouth = expression.mouth.sadderMouth()
     }
 }
 
