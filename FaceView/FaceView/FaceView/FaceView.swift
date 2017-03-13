@@ -29,12 +29,12 @@
         return CGPoint(x: bounds.midX, y: bounds.midY)
     }
     private struct Ratios {
-        static let SkullRadiusToEyeOffset: CGFloat = 3
-        static let SkullRadiusToEyeRadius: CGFloat = 10
-        static let SkullRadiusToMouthWidth: CGFloat = 1
+        static let SkullRadiusToEyeOffset: CGFloat   = 3
+        static let SkullRadiusToEyeRadius: CGFloat   = 10
+        static let SkullRadiusToMouthWidth: CGFloat  = 1
         static let SkullRadiusToMouthHeight: CGFloat = 3
-        static let SkullRadiusToMouthOffset:CGFloat = 3
-        static let SkullRadiusToBrowOffset: CGFloat = 5
+        static let SkullRadiusToMouthOffset:CGFloat  = 3
+        static let SkullRadiusToBrowOffset: CGFloat  = 5
     }
     
     private enum Eye {
