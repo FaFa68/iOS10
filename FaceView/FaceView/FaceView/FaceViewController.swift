@@ -12,7 +12,7 @@ class FaceViewController: UIViewController {
     
     var expression = FacialExpression(eyes: .Open, eyeBrows: .Normal , mouth: .Frown) {
         didSet {
-            updateUI()
+            //updateUI()
         }
     }
     

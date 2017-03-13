@@ -13,6 +13,7 @@
 		11225E7C1E6EE9CA00081CC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11225E7B1E6EE9CA00081CC2 /* Assets.xcassets */; };
 		11225E7F1E6EE9CA00081CC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11225E7D1E6EE9CA00081CC2 /* LaunchScreen.storyboard */; };
 		11225E881E6EF82400081CC2 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11225E871E6EF82400081CC2 /* FaceView.swift */; };
+		115B31631E76DF6900E0DA8B /* EmotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B31621E76DF6900E0DA8B /* EmotionsViewController.swift */; };
 		11E767491E700A730026E876 /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E767481E700A730026E876 /* FacialExpression.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		11225E7E1E6EE9CA00081CC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11225E801E6EE9CA00081CC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11225E871E6EF82400081CC2 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
+		115B31621E76DF6900E0DA8B /* EmotionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionsViewController.swift; sourceTree = "<group>"; };
 		11E767481E700A730026E876 /* FacialExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 				11225E861E6EE9EF00081CC2 /* Supporting files */,
 				11225E761E6EE9CA00081CC2 /* FaceViewController.swift */,
 				11225E781E6EE9CA00081CC2 /* Main.storyboard */,
+				115B31621E76DF6900E0DA8B /* EmotionsViewController.swift */,
 				11225E871E6EF82400081CC2 /* FaceView.swift */,
 				11E767481E700A730026E876 /* FacialExpression.swift */,
 			);
@@ -153,6 +156,7 @@
 			files = (
 				11225E771E6EE9CA00081CC2 /* FaceViewController.swift in Sources */,
 				11E767491E700A730026E876 /* FacialExpression.swift in Sources */,
+				115B31631E76DF6900E0DA8B /* EmotionsViewController.swift in Sources */,
 				11225E751E6EE9CA00081CC2 /* AppDelegate.swift in Sources */,
 				11225E881E6EF82400081CC2 /* FaceView.swift in Sources */,
 			);
@@ -281,6 +285,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = FaFa.FaceView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -294,6 +299,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = FaFa.FaceView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
